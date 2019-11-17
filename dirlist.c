@@ -13,10 +13,8 @@ int main(){
     this_dir = opendir(".");
     struct dirent *files = readdir(this_dir);
     int index = 0;
-    while(file != NULL){
-        printf("%s\n", file->d_name);
-        *(files + index) = readdir(this_dir);
-        index++;
+    for(;files!= NULL; index++, (files+index) = readdir(this_dir)){
+        printf("%s\n", (files+index)->d_name);
     }
     return 0;
 }
