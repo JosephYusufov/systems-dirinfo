@@ -1,5 +1,5 @@
 all:
-	gcc -o program dirlist.c
+	gcc -o dirinfo dirlist.c
 
 run:
-	./program
+	./dirinfo
